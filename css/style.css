@@ -173,3 +173,11 @@ main .age p{
 main .age p span {
     color: var(--clr-primary-purple);
 }
+
+.label-error {
+    color: var(--clr-primary-light-red) !important;
+}
+
+.input-error {
+    border: 1px solid var(--clr-primary-light-red) !important;
+}

@@ -1,7 +1,8 @@
 const dateInputs = document.querySelectorAll('.input-container input');
 const ageSpans = document.querySelectorAll('.age p span');
 const viewErrors = document.querySelectorAll('.error');
-
+const enterAgeLabels = document.querySelectorAll('.enter-age-label');
+const enterAgeInputs = document.querySelectorAll('.enter-age');
 let inputDate = {};
 const months = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 let date = new Date();
@@ -28,6 +29,13 @@ const calculateAge = () => {
     // blank the number before we start the program again
     ageSpans.forEach(span => {
         span.innerText = '- -'
+    })
+    // remove error classes from elements before starting the program
+    enterAgeLabels.forEach(label => {
+        label.classList.remove('label-error');
+    })
+    enterAgeInputs.forEach(input => {
+        input.classList.remove('input-error');
     })
     // function to check for all posable errors
     let error = checkForErrors(d1, m1, y1);
@@ -70,6 +78,12 @@ const calculateAge = () => {
         viewErrors.forEach(viewError => {
             if(viewError.classList.contains(error[0]))
                 viewError.innerText = error[1];
+        })
+        enterAgeLabels.forEach(label => {
+            label.classList.add('label-error');
+        })
+        enterAgeInputs.forEach(input => {
+            input.classList.add('input-error');
         })
     }
 }
