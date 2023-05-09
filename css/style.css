@@ -1,0 +1,175 @@
+/* 
+# Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Purple: hsl(259, 100%, 65%)
+- Light red: hsl(0, 100%, 67%)
+
+### Neutral
+
+- White: hsl(0, 0%, 100%)
+- Off white: hsl(0, 0%, 94%)
+- Light grey: hsl(0, 0%, 86%)
+- Smokey grey: hsl(0, 1%, 44%)
+- Off black: hsl(0, 0%, 8%)
+
+## Typography
+
+### Body Copy
+
+- Font size (inputs): 32px
+
+### Font
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400i, 700, 800i
+*/
+
+/* start global rules */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --clr-primary-purple: hsl(259, 100%, 65%);
+    --clr-primary-light-red: hsl(0, 100%, 67%);
+    --clr-neutral-white: white;
+    --clr-neutral-off-white: hsl(0, 0%, 94%);
+    --clr-neutral-light-grey: hsl(0, 0%, 86%);
+    --clr-neutral-smokey-grey: hsl(0, 1%, 44%);
+    --clr-neutral-off-black: hsl(0, 0%, 8%);
+}
+
+body {
+    background-color: var(--clr-neutral-light-grey);
+    font-family: 'Poppins', sans-serif;
+}
+/* end global rules */
+
+main {
+    background-color: var(--clr-neutral-white);
+    width: 40%;
+    /* height: 60%; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -o-transform: translate(-50%, -50%);
+    padding: 35px;
+    border-radius: 15px;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-bottom-right-radius: 150px;
+}
+
+main .birth-date {
+    margin-bottom: 35px;
+    position: relative;
+}
+
+main .birth-date .input-container {
+    display: inline-block;
+    width: 20%;
+    margin-right: 5%;
+}
+
+main .birth-date label {
+    font-weight: 700;
+    font-size: 12px;
+    letter-spacing: 1.6px;
+    color: var(--clr-neutral-smokey-grey);
+}
+main .birth-date input {
+    display: block;
+    font-size: 32px;
+    width: 100%;
+    height: 60px;
+    font-weight: 700;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    border: 1px solid var(--clr-neutral-light-grey);
+    padding: 10px;
+}
+
+main .birth-date p{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 12px;
+    color: var(--clr-primary-light-red);
+    position: absolute;
+    top: calc(100%);
+    width: 20%;
+
+}
+main .birth-date input:focus {
+    border:1px solid var(--clr-primary-purple);
+    outline: none;
+}
+
+main .birth-date .calc-age-btn {
+    height:50px;
+    width: 50px;
+    position: absolute;
+    /*top=100%(oftheparent)+35px(marginbottomoftheparent)-25px(halfheightofthebutton)*/
+    top: calc(100% + 10px);
+    right: 0;
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    border: none;
+    background-color: var(--clr-primary-purple);
+    cursor: pointer;
+    transition: 0.5s;
+    -webkit-transition: 0.5s;
+    -moz-transition: 0.5s;
+    -ms-transition: 0.5s;
+    -o-transition: 0.5s;
+}
+main .birth-date .calc-age-btn:hover {
+    background-color: var(--clr-neutral-off-black);
+}
+
+main .birth-date .calc-age-btn embed {
+    width: 25px;
+    height: 25px;
+    pointer-events: none;
+}
+
+hr {
+    border: 1px solid var(--clr-neutral-light-grey);
+    /* height: 0.1px;
+    background-color: var(--clr-neutral-light-grey); */
+}
+
+main .age p{
+    font-size: 70px;
+    font-weight: 800;
+    font-style: italic;
+}
+
+
+main .age p span {
+    color: var(--clr-primary-purple);
+}

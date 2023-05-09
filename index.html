@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Age calculator</title>
+    <!-- main css file -->
+    <link rel="stylesheet" href="css/style.css" />
+    <!-- google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap"
+        rel="stylesheet" />
+    <script src="js//app.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <form class="birth-date">
+
+            <div format="day" class="input-container">
+                <label for="day">DAY</label>
+                <input id="day" type="text" />
+                <p class="error day-error"></p>
+            </div>
+
+            <div format="month" class="input-container">
+                <label for="month">MONTH</label>
+                <input id="month" type="text" />
+                <p class="error month-error"></p>
+            </div>
+
+            <div format="year" class="input-container">
+                <label for="year">YEAR</label>
+                <input id="year" type="text" />
+                <p class="error year-error"></p>
+            </div>
+
+            <button class="calc-age-btn" type="submit"><embed src="images/icon-arrow.svg"></button>
+        </form>
+        <hr>
+        <div class="age">
+            <p><span>- -</span> years</p>
+            <p><span>- -</span> months</p>
+            <p><span>- -</span> days</p>
+        </div>
+    </main>
+</body>
+
+</html>
