@@ -80,7 +80,7 @@ main {
 }
 
 main .birth-date {
-    margin-bottom: 35px;
+    margin-bottom: 45px;
     position: relative;
 }
 
@@ -130,8 +130,8 @@ main .birth-date .calc-age-btn {
     height:50px;
     width: 50px;
     position: absolute;
-    /*top=100%(oftheparent)+35px(marginbottomoftheparent)-25px(halfheightofthebutton)*/
-    top: calc(100% + 10px);
+    /*top=100%(oftheparent)+45px(marginbottomoftheparent)-25px(halfheightofthebutton)*/
+    top: calc(100% + 20px);
     right: 0;
     border-radius: 50%;
     -webkit-border-radius: 50%;
@@ -181,3 +181,64 @@ main .age p span {
 .input-error {
     border: 1px solid var(--clr-primary-light-red) !important;
 }
+
+/* media */
+@media(max-width:1160px) {
+    main {
+      width: 60%;  
+    }
+}
+@media(max-width:780px) {
+    main {
+      width: 80%;  
+    }
+}
+@media(max-width:585px) {
+    main {
+      width: 80%;  
+    }
+    main .birth-date {
+        margin-bottom: 70px;
+    }
+    main .birth-date .calc-age-btn{
+        right: calc(50% - 25px)  !important;
+        top: calc(100% + 45px) !important;
+    }
+    main .birth-date .input-container {
+        width: 25%;
+    }
+    main .birth-date .input-container input{
+        font-size: 20px;
+    }
+    main .age p {
+        font-size: 50px;
+    }
+    main .age {
+        margin-top: 40px;
+    }
+}
+@media(max-width:440px) {
+    main {
+      width: 80%;  
+    }
+    main .age p {
+        font-size: 40px;
+    }
+}
+    
+@media(max-width:375px) {
+    main {
+      width: 95%;  
+    }
+    main .age p {
+        font-size: 30px;
+    }
+}
+    
+/* 
+@media(max-width:880px) {
+    main .age p {
+        font-size: 50px;
+    }
+} 
+*/
